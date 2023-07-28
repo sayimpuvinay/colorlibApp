@@ -1,0 +1,59 @@
+.logindiv {
+    background-color : #e6e6e6;
+}
+
+.LoginContainer {
+    padding: 100px;
+}
+
+.colorlib1 {
+    font-family: "Arial";
+    font-size: 28px;
+    color: black;
+}
+
+.colorlib2 {
+    color: black;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.p1 {
+    color:gray;
+    font-weight: 400;
+}
+
+.username {
+    font-family: "Arial";
+    font-size: 18px;
+    color: gray;
+}
+
+.input {
+    background-color: white;
+    padding: 8px; 
+    width: 500px;
+    border: none;
+}
+
+.password {
+    font-family: "Arial";
+    font-size: 18px;
+    color: gray;
+    padding-top: 8px;
+}
+
+.checkbox-text {
+    margin: auto;
+    padding: 4px;
+}
+
+.confirmation {
+    width: 95%;
+}
+
+.loginbutton {
+    width:95%;
+    padding: 15px;
+    margin: 9px;
+}
