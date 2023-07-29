@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,13 +7,31 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  loginForm!: FormGroup; // Add '!' to indicate it will be initialized later
 
-  navigateToHome() {
-    // Use the router.navigate method to navigate to the home component
-    this.router.navigate(['/home']);
+  constructor(private fb: FormBuilder, private router: Router) { }
+
+  ngOnInit() {
+    this.initForm();
   }
 
+  initForm() {
+    this.loginForm = this.fb.group({
+      email: ['vinaysayimpu@gmail.com', [Validators.required, Validators.email]],
+      password: ['123456789', Validators.required]
+    });
+  }
+
+  login() {
+    if (this.loginForm.valid) {
+      // Perform authentication logic here using 'this.loginForm.value.email' and 'this.loginForm.value.password'
+      // For example, you can use a service to authenticate the user
+      // and then navigate to the home component upon successful authentication.
+
+      // For now, let's just navigate to the home component directly without any authentication logic.
+      this.router.navigate(['/home']);
+    }
+  }
 }
