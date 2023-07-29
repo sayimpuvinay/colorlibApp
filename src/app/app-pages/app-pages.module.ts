@@ -7,7 +7,6 @@ import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    LoginComponent,
     HomeComponent
   ],
   imports: [
