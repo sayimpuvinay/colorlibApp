@@ -1,59 +1,61 @@
-.logindiv {
-    background-color : #e6e6e6;
-}
-
-.LoginContainer {
-    padding: 100px;
-}
-
-.colorlib1 {
-    font-family: "Arial";
+/* login.component.css */
+.login-container {
+    background-image: url('https://www.prajwaldesai.com/wp-content/uploads/2015/01/computer_dark.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-form-container {
+    max-width: 500px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+  }
+  
+  .colorlib1 {
+    font-family: "Arial", sans-serif;
     font-size: 28px;
-    color: black;
-}
-
-.colorlib2 {
-    color: black;
     font-weight: bold;
-    font-size: 28px;
-}
-
-.p1 {
-    color:gray;
+    color: #333;
+  }
+  
+  .colorlib2 {
+    color: #333;
+  }
+  
+  .p1 {
+    color: #555;
     font-weight: 400;
-}
-
-.username {
-    font-family: "Arial";
+  }
+  
+  .username,
+  .password {
+    font-family: "Arial", sans-serif;
     font-size: 18px;
-    color: gray;
-}
-
-.input {
-    background-color: white;
-    padding: 8px; 
-    width: 500px;
+    color: #555;
+  }
+  
+  .form-control {
+    background-color: #fff;
+    padding: 8px;
     border: none;
-}
-
-.password {
-    font-family: "Arial";
-    font-size: 18px;
-    color: gray;
-    padding-top: 8px;
-}
-
-.checkbox-text {
-    margin: auto;
-    padding: 4px;
-}
-
-.confirmation {
-    width: 95%;
-}
-
-.loginbutton {
-    width:95%;
+    border-radius: 4px;
+  }
+  
+  .form-check-label {
+    color: #555;
+  }
+  
+  .login-button {
+    width: 100%;
     padding: 15px;
-    margin: 9px;
-}
+    margin-top: 15px;
+  }
+  
+  /* Bootstrap styles */
+  /* Link to Bootstrap CSS in your index.html if not already done */
+  
