@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,22 +7,13 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+  loginForm: FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', Validators.required)
+  });
 
-  loginForm!: FormGroup; // Add '!' to indicate it will be initialized later
-
-  constructor(private fb: FormBuilder, private router: Router) { }
-
-  ngOnInit() {
-    this.initForm();
-  }
-
-  initForm() {
-    this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
-    });
-  }
+  constructor(private router: Router) {}
 
   login() {
     if (this.loginForm.valid) {
@@ -40,5 +31,4 @@ export class LoginComponent implements OnInit {
       }
     }
   }
-  
 }

@@ -10,19 +10,13 @@ exports.LoginComponent = void 0;
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(fb, router) {
-        this.fb = fb;
+    function LoginComponent(router) {
         this.router = router;
-    }
-    LoginComponent.prototype.ngOnInit = function () {
-        this.initForm();
-    };
-    LoginComponent.prototype.initForm = function () {
-        this.loginForm = this.fb.group({
-            email: ['', [forms_1.Validators.required, forms_1.Validators.email]],
-            password: ['', forms_1.Validators.required]
+        this.loginForm = new forms_1.FormGroup({
+            email: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.email]),
+            password: new forms_1.FormControl('', forms_1.Validators.required)
         });
-    };
+    }
     LoginComponent.prototype.login = function () {
         if (this.loginForm.valid) {
             var email = this.loginForm.value.email;
