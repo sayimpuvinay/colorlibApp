@@ -1,1 +1,14 @@
-<p>carrers works!</p>
+<div class="container">
+  <h1>Join Our Team</h1>
+  <div class="row mt-4">
+    <div class="col-md-6 mb-4" *ngFor="let role of roles">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">{{ role.title }}</h4>
+          <p class="card-text">{{ role.description }}</p>
+          <a href="#" class="btn btn-primary">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
