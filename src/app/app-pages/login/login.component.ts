@@ -19,19 +19,26 @@ export class LoginComponent implements OnInit {
 
   initForm() {
     this.loginForm = this.fb.group({
-      email: ['vinaysayimpu@gmail.com', [Validators.required, Validators.email]],
-      password: ['123456789', Validators.required]
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
     });
   }
 
   login() {
     if (this.loginForm.valid) {
-      // Perform authentication logic here using 'this.loginForm.value.email' and 'this.loginForm.value.password'
-      // For example, you can use a service to authenticate the user
-      // and then navigate to the home component upon successful authentication.
-
-      // For now, let's just navigate to the home component directly without any authentication logic.
-      this.router.navigate(['/home']);
+      const email = this.loginForm.value.email;
+      const password = this.loginForm.value.password;
+  
+      // Check if email and password match the desired values
+      if (email === 'vinaysayimpu@gmail.com' && password === 'Vinay@123') {
+        // Authentication successful, navigate to the home component
+        this.router.navigate(['/home']);
+      } else {
+        // Authentication failed, you can handle the error here
+        // For example, you can display an error message to the user
+        console.log('Authentication failed. Invalid email or password.');
+      }
     }
   }
+  
 }
