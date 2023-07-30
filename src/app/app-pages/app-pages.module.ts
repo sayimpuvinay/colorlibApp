@@ -12,12 +12,6 @@ import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    TechnologyComponent,
-    CarrersComponent,
-    AboutComponent,
-    BlogComponent,
-    ContactComponent
   ],
   imports: [
     CommonModule
